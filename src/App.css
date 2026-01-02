@@ -1,0 +1,74 @@
+/* src/App.css */
+:root {
+  --bg-color: #f8f9fa;
+  --line-color: #cbd5e1;
+  --primary-color: #6366f1; /* Indigo */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Modern Toolbar */
+.toolbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+}
+
+.toolbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5);
+}
+
+/* Infinite Canvas with Dot Pattern */
+.canvas {
+  flex: 1;
+  overflow: auto;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: radial-gradient(#94a3b8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
