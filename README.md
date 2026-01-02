@@ -23,7 +23,7 @@ Follow these steps to set up the project locally on your machine.
 ### 1. Installation
 1.  Open your terminal and clone the repository:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/workflow-builder-assignment.git
+    git clone https://github.com/Jaydev-Mod/Workflow-Builder.git
     cd workflow-builder-assignment
     ```
 2.  Install the dependencies:
@@ -52,16 +52,17 @@ Instead of a standard nested JSON tree (which causes recursion performance issue
 const nodes = {
   "start-1": { id: "start-1", type: "start", children: ["action-2"] },
   "action-2": { id: "action-2", type: "action", children: ["end-1"] }
-}
+} 
+```
 
-2. Recursive Component Pattern
+### 2. Recursive Component Pattern
 The UI is built using a single WorkflowNode component that renders itself for its children.
 
 Logic: <WorkflowNode /> checks its children array and renders a new <WorkflowNode /> for each ID found.
 
 Result: The UI automatically handles infinite nesting depth without extra code.
 
-3. CSS-Only Connection Lines
+### 3. CSS-Only Connection Lines
 I strictly followed the requirement to avoid libraries like React-Flow.
 
 Technique: I used CSS ::before (vertical lines) and ::after (connectors) combined with absolute positioning.
